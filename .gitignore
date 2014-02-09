@@ -4,3 +4,4 @@ RemoteSystemsTempFiles/
 */.settings/
 */target/
 *.classpath
+.project
