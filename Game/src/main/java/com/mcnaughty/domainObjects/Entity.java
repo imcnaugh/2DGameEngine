@@ -8,9 +8,11 @@ public abstract class Entity {
 	private double xLocation;
 	private double yLocation;
 	
-	protected Entity(int height, int width){
+	protected Entity(int height, int width, double xStartLocation, double yStartLocation){
 		this.height = height;
 		this.width = width;
+		this.xLocation = xStartLocation;
+		this.yLocation = yStartLocation;
 	}
 	
 	protected double moveLeft(double xVal){
