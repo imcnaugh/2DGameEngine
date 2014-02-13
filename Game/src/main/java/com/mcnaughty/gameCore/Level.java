@@ -2,7 +2,7 @@ package com.mcnaughty.gameCore;
 
 public abstract class Level {
 	
-	protected String name;
+	protected final String name;
 
 	protected Level(String name){
 		this.name = name;
@@ -11,9 +11,4 @@ public abstract class Level {
 	public String getName() {
 		return name;
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 }
