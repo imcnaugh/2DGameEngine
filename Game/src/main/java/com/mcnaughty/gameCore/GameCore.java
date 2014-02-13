@@ -8,19 +8,20 @@ public class GameCore implements Runnable {
 
 	private boolean gameRunning;
 	private long tickNumber = 0;
+	
+	private Level[] levels;
 
 	private List<Entity> entitys;
 
-	private void setUp() {
-
+	public GameCore(Level[] levels){
+		this.levels = levels;
 	}
 
 	public void run() {
-
-		this.setUp();
-
 		gameRunning = true;
 
+		Level currentLevel = levels[0];
+		
 		while (gameRunning) {
 			
 			for(Entity entity : entitys){
