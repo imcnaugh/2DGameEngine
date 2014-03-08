@@ -1,4 +1,4 @@
-package com.mcnaughty.gameCore;
+package com.mcnaughty.game.gameCore;
 
 public abstract class Level {
 	

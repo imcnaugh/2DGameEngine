@@ -1,8 +1,8 @@
-package com.mcnaughty.gameCore;
+package com.mcnaughty.game.gameCore;
 
 import java.util.List;
 
-import com.mcnaughty.domainObjects.Entity;
+import com.mcnaughty.game.domainObjects.Entity;
 
 public class GameCore implements Runnable {
 

@@ -1,4 +1,4 @@
-package com.mcnaughty.domainObjects;
+package com.mcnaughty.game.domainObjects;
 
 import java.util.List;
 
