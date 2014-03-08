@@ -8,7 +8,8 @@ public abstract class Player extends Entity {
 	private Input input;
 
 	protected Player(int height, int width, double xStartLocation,
-			double yStartLocation) {
+			double yStartLocation, Input input) {
 		super(height, width, xStartLocation, yStartLocation);
+		this.input = input;
 	}
 }
