@@ -11,13 +11,18 @@ public class MainGui {
 	
 	private JFrame mainFrame = new JFrame("test of game");
 	
+	//TODO autowire this shit in, in time
 	private Input input;
 	
 	public MainGui(){
-		input = new KeyboardinputImpl();
 		configureGuiComponets();
-		mainFrame.addKeyListener((KeyListener) input);
+		addListeners();
 		displayMainFrame();
+	}
+
+	private void addListeners() {
+		input = new KeyboardinputImpl();
+		mainFrame.addKeyListener((KeyListener) input);
 	}
 
 	private void displayMainFrame() {
