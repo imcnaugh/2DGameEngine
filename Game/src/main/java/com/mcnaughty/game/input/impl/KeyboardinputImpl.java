@@ -39,18 +39,22 @@ public class KeyboardinputImpl implements Input, KeyListener {
 		switch (e.getKeyCode()) {
 			case (KeyEvent.VK_KP_UP): {
 				upArrowPressed = true;
+				System.out.println("up pressed");
 				break;
 			}
 			case (KeyEvent.VK_KP_DOWN): {
 				downArrowPressed = true;
+				System.out.println("down pressed");
 				break;
 			}
 			case (KeyEvent.VK_KP_LEFT): {
 				leftArrowPressed = true;
+				System.out.println("left pressed");
 				break;
 			}
 			case (KeyEvent.VK_KP_RIGHT): {
 				rightArrowPressed = true;
+				System.out.println("right pressed");
 				break;
 			}
 		}
@@ -60,18 +64,22 @@ public class KeyboardinputImpl implements Input, KeyListener {
 		switch (e.getKeyCode()) {
 			case (KeyEvent.VK_KP_UP): {
 				upArrowPressed = false;
+				System.out.println("up released");
 				break;
 			}
 			case (KeyEvent.VK_KP_DOWN): {
 				downArrowPressed = false;
+				System.out.println("down released");
 				break;
 			}
 			case (KeyEvent.VK_KP_LEFT): {
 				leftArrowPressed = false;
+				System.out.println("left released");
 				break;
 			}
 			case (KeyEvent.VK_KP_RIGHT): {
 				rightArrowPressed = false;
+				System.out.println("right released");
 				break;
 			}
 		}
