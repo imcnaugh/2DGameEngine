@@ -9,28 +9,6 @@ public class Beggining {
 	}
 
 	public Beggining() throws InterruptedException {
-//		MainGui mainGui = new MainGui();
-		String[] strA = new String[] {"hello", "world", "test"};
-		TestClass test = new TestClass(strA);
-		test.printStr();
-		strA = new String[] {"new", "text"};
-		test.printStr();
-		
+		MainGui mainGui = new MainGui();
 	}
-}
-
-class TestClass{
-	private String[] strings;
-	
-	public TestClass(String[] str){
-		strings = str;
-	}
-	
-	public void printStr(){
-		for(String s : strings){
-			System.out.println(s);
-		}
-	}
-	
-	
 }
