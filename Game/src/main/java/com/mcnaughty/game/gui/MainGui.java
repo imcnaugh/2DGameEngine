@@ -4,6 +4,8 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.mcnaughty.game.input.Input;
 import com.mcnaughty.game.input.impl.KeyboardinputImpl;
 
@@ -11,7 +13,7 @@ public class MainGui {
 	
 	private JFrame mainFrame = new JFrame("test of game");
 	
-	//TODO autowire this shit in, in time
+	@Autowired
 	private Input input;
 	
 	public MainGui(){
