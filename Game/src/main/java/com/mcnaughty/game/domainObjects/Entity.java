@@ -1,8 +1,6 @@
 package com.mcnaughty.game.domainObjects;
 
-import java.util.List;
-
-public abstract class Entity implements List {
+public abstract class Entity {
 
 	private final int height;
 	private final int width;
