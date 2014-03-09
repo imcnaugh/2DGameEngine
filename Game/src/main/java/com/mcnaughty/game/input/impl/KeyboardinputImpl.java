@@ -3,8 +3,11 @@ package com.mcnaughty.game.input.impl;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import org.springframework.stereotype.Component;
+
 import com.mcnaughty.game.input.Input;
 
+@Component
 public class KeyboardinputImpl implements Input, KeyListener {
 
 	private boolean upArrowPressed;
@@ -34,7 +37,7 @@ public class KeyboardinputImpl implements Input, KeyListener {
 	public boolean isRightArrowPressed() {
 		return rightArrowPressed;
 	}
-	
+
 	public void keyPressed(KeyEvent e) {
 		switch (e.getKeyCode()) {
 			case (KeyEvent.VK_UP): {
