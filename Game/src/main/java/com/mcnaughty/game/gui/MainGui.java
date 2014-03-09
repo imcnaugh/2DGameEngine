@@ -1,5 +1,6 @@
 package com.mcnaughty.game.gui;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.KeyListener;
@@ -43,6 +44,9 @@ public class MainGui {
 	}
 	
 	private void drawComponets(Graphics g){
+		g.setColor(Color.BLACK);
+		g.fillRect(0, 0, mainFrame.getWidth(), mainFrame.getHeight());
+		g.setColor(Color.WHITE);
 		g.drawString("hello world", 40, 40);
 	}
 
