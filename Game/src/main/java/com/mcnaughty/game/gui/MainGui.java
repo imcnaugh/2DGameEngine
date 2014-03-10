@@ -34,6 +34,7 @@ public class MainGui {
 	}
 
 	private void addListeners() {
+		//TODO im not sure if i like that cast,
 		mainFrame.addKeyListener((KeyListener) input);
 	}
 
