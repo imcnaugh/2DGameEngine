@@ -1,5 +1,7 @@
 package com.mcnaughty.game.domainObjects;
 
+import java.awt.Image;
+
 public abstract class Entity {
 
 	private final int height;
@@ -7,6 +9,8 @@ public abstract class Entity {
 
 	private double xLocation;
 	private double yLocation;
+
+	private Image image;
 
 	/**
 	 * @param height
@@ -19,11 +23,12 @@ public abstract class Entity {
 	 *            Starting Y location of entity
 	 */
 	protected Entity(int height, int width, double xStartLocation,
-			double yStartLocation) {
+			double yStartLocation, Image image) {
 		this.height = height;
 		this.width = width;
 		this.xLocation = xStartLocation;
 		this.yLocation = yStartLocation;
+		this.image = image;
 	}
 
 	/**
