@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.mcnaughty.game.domainObjects.Entity;
 import com.mcnaughty.game.gameCore.EntityManager;
 import com.mcnaughty.game.input.Input;
-import com.mcnaughty.game.input.impl.KeyboardinputImpl;
 
 public class MainGui {
 
@@ -21,16 +20,16 @@ public class MainGui {
 
 	@Autowired
 	private Input input;
-	
+
 	@Autowired
 	private EntityManager entityManager;
 
 	public MainGui() {
 		configureGuiComponets();
-		mainFrame.add(new JPanel(){
+		mainFrame.add(new JPanel() {
 			private static final long serialVersionUID = 1L;
 
-			public void paintComponent(Graphics g){
+			public void paintComponent(Graphics g) {
 				drawComponets(g);
 			}
 		});
@@ -39,7 +38,7 @@ public class MainGui {
 	}
 
 	private void addListeners() {
-		//TODO im not sure if i like that cast,
+		// TODO im not sure if i like that cast,
 		mainFrame.addKeyListener((KeyListener) input);
 	}
 
@@ -47,14 +46,16 @@ public class MainGui {
 		mainFrame.pack();
 		mainFrame.setVisible(true);
 	}
-	
-	private void drawComponets(Graphics g){
-		//TODO make background configurable
+
+	private void drawComponets(Graphics g) {
+		// TODO make background configurable
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, mainFrame.getWidth(), mainFrame.getHeight());
-		
-		for(Entity entity : entityManager.getEntities()){
-			
+
+		for (Entity entity : entityManager.getEntities()) {
+			g.drawImage(entity.getImage(), (int) entity.getxLocation(),
+					(int) entity.getyLocation(), entity.getWidth(),
+					entity.getHeight(), null);
 		}
 	}
 
