@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.mcnaughty.game.domainObjects.Entity;
 import com.mcnaughty.game.gameCore.EntityManager;
 import com.mcnaughty.game.input.Input;
 import com.mcnaughty.game.input.impl.KeyboardinputImpl;
@@ -48,10 +49,13 @@ public class MainGui {
 	}
 	
 	private void drawComponets(Graphics g){
+		//TODO make background configurable
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, mainFrame.getWidth(), mainFrame.getHeight());
-		g.setColor(Color.WHITE);
-		g.drawString("hello world", 40, 40);
+		
+		for(Entity entity : entityManager.getEntities()){
+			
+		}
 	}
 
 	private void configureGuiComponets() {

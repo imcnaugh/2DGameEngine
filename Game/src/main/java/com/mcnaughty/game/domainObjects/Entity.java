@@ -87,4 +87,23 @@ public abstract class Entity {
 	 */
 	public abstract void onTick(long tick);
 
+	public double getxLocation() {
+		return xLocation;
+	}
+
+	public double getyLocation() {
+		return yLocation;
+	}
+	public Image getImage() {
+		return image;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
 }
