@@ -1,5 +1,7 @@
 package com.mcnaughty.game.domainObjects;
 
+import java.awt.Image;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.mcnaughty.game.input.Input;
