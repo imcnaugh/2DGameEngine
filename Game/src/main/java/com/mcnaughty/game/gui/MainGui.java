@@ -34,7 +34,6 @@ public class MainGui {
 	}
 
 	private void addListeners() {
-		input = new KeyboardinputImpl();
 		mainFrame.addKeyListener((KeyListener) input);
 	}
 
