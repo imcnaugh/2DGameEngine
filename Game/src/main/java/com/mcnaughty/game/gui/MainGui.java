@@ -36,7 +36,7 @@ public class MainGui {
 			}
 		});
 		addListeners();
-//		displayMainFrame();
+		displayMainFrame();
 	}
 
 	private void addListeners() {
@@ -44,7 +44,7 @@ public class MainGui {
 		mainFrame.addKeyListener((KeyListener) input);
 	}
 
-	public void displayMainFrame() {
+	private void displayMainFrame() {
 		mainFrame.pack();
 		mainFrame.setVisible(true);
 	}
