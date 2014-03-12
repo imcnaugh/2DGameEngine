@@ -9,11 +9,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.mcnaughty.game.domainObjects.Entity;
 import com.mcnaughty.game.gameCore.EntityManager;
 import com.mcnaughty.game.input.Input;
 
+@Component
 public class MainGui {
 
 	private JFrame mainFrame = new JFrame("test of game");
