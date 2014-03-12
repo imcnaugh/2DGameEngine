@@ -32,7 +32,7 @@ public class SpaceInvadersMain {
 		
 		BufferedImage img = ImageIO.read(new File("src/main/resources/images/test.jpg"));
 		
-		Entity entity = new Entity(200,200,100,100, img) {
+		Entity entity = new Entity(500,500,0,0, img) {
 			
 			@Override
 			public void onTick(long tick) {
