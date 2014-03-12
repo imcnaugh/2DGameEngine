@@ -36,7 +36,7 @@ public class MainGui {
 			}
 		});
 		addListeners();
-		displayMainFrame();
+//		displayMainFrame();
 	}
 
 	private void addListeners() {
@@ -44,7 +44,7 @@ public class MainGui {
 		mainFrame.addKeyListener((KeyListener) input);
 	}
 
-	private void displayMainFrame() {
+	public void displayMainFrame() {
 		mainFrame.pack();
 		mainFrame.setVisible(true);
 	}
@@ -53,6 +53,9 @@ public class MainGui {
 		// TODO make background configurable
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, mainFrame.getWidth(), mainFrame.getHeight());
+		
+		g.setColor(Color.WHITE);
+		g.drawString("Hello World", 50, 50);
 
 		for (Entity entity : entityManager.getEntities()) {
 			g.drawImage(entity.getImage(), (int) entity.getxLocation(),
