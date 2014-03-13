@@ -36,7 +36,6 @@ public class SpaceInvadersMain {
 			
 			@Override
 			public void onTick(long tick) {
-				//TODO add shit
 			}
 		};
 		entityManager.getEntities().add(entity);
