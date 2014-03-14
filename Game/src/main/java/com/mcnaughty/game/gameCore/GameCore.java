@@ -15,6 +15,9 @@ public class GameCore {
 	private GamePlay gamePlay;
 
 	public GameCore() {
+	}
+	
+	public void startGame(){
 		Thread gamePlayThread = new Thread(gamePlay);
 		gamePlayThread.start();
 	}
