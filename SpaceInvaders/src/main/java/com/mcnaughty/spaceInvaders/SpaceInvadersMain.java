@@ -11,12 +11,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.mcnaughty.game.domainObjects.Entity;
 import com.mcnaughty.game.gameCore.EntityManager;
+import com.mcnaughty.game.gameCore.GameCore;
 import com.mcnaughty.game.gui.MainGui;
 
 public class SpaceInvadersMain {
 
-	private MainGui mainGui;
-
+	private GameCore gameCore;
+	
 	private EntityManager entityManager;
 
 	public static void main(String[] args) throws IOException {
@@ -27,7 +28,7 @@ public class SpaceInvadersMain {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
 
-		mainGui = (MainGui) ctx.getBean(MainGui.class);
+		gameCore = (GameCore) ctx.getBean(GameCore.class);
 		entityManager = (EntityManager) ctx.getBean(EntityManager.class);
 		
 		BufferedImage img = ImageIO.read(new File("src/main/resources/images/test.jpg"));

@@ -50,6 +50,10 @@ public class MainGui {
 	}
 
 	private void drawComponets(Graphics g) {
+		drawGameplay(g);
+	}
+
+	private void drawGameplay(Graphics g) {
 		// TODO make background configurable
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, mainFrame.getWidth(), mainFrame.getHeight());
