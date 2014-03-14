@@ -6,7 +6,7 @@ import com.mcnaughty.game.domainObjects.Entity;
 
 public class TestEntity extends Entity {
 
-	protected TestEntity(int height, int width, double xStartLocation,
+	public TestEntity(int height, int width, double xStartLocation,
 			double yStartLocation, Image image) {
 		super(height, width, xStartLocation, yStartLocation, image);
 		// TODO Auto-generated constructor stub
