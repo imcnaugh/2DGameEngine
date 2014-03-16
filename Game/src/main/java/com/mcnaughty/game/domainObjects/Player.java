@@ -9,7 +9,7 @@ import com.mcnaughty.game.input.Input;
 public abstract class Player extends Entity {
 
 	@Autowired
-	private Input input;
+	protected Input input;
 
 	protected Player(int height, int width, double xStartLocation,
 			double yStartLocation, Input input, String imagePath)
