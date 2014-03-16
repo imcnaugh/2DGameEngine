@@ -1,6 +1,10 @@
 package com.mcnaughty.game.domainObjects;
 
 import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 public abstract class Entity {
 
@@ -21,14 +25,15 @@ public abstract class Entity {
 	 *            Starting X location of entity
 	 * @param yStartLocation
 	 *            Starting Y location of entity
+	 * @throws IOException
 	 */
 	protected Entity(int height, int width, double xStartLocation,
-			double yStartLocation, Image image) {
+			double yStartLocation, String imagePath) throws IOException {
 		this.height = height;
 		this.width = width;
 		this.xLocation = xStartLocation;
 		this.yLocation = yStartLocation;
-		this.image = image;
+		this.image = ImageIO.read(new File(imagePath));
 	}
 
 	/**
@@ -94,6 +99,7 @@ public abstract class Entity {
 	public double getyLocation() {
 		return yLocation;
 	}
+
 	public Image getImage() {
 		return image;
 	}

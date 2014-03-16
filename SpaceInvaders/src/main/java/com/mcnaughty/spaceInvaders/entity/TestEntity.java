@@ -1,20 +1,18 @@
 package com.mcnaughty.spaceInvaders.entity;
 
-import java.awt.Image;
+import java.io.IOException;
 
 import com.mcnaughty.game.domainObjects.Entity;
 
 public class TestEntity extends Entity {
 
 	public TestEntity(int height, int width, double xStartLocation,
-			double yStartLocation, Image image) {
-		super(height, width, xStartLocation, yStartLocation, image);
-		// TODO Auto-generated constructor stub
+			double yStartLocation, String imagePath) throws IOException {
+		super(height, width, xStartLocation, yStartLocation, imagePath);
 	}
 
 	public void onTick(long tick) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 }

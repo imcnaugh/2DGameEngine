@@ -1,6 +1,6 @@
 package com.mcnaughty.game.domainObjects;
 
-import java.awt.Image;
+import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,8 +12,9 @@ public abstract class Player extends Entity {
 	private Input input;
 
 	protected Player(int height, int width, double xStartLocation,
-			double yStartLocation, Input input, Image image) {
-		super(height, width, xStartLocation, yStartLocation, image);
+			double yStartLocation, Input input, String imagePath)
+			throws IOException {
+		super(height, width, xStartLocation, yStartLocation, imagePath);
 		this.input = input;
 	}
 }
