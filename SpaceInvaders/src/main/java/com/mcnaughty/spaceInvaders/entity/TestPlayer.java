@@ -2,8 +2,6 @@ package com.mcnaughty.spaceInvaders.entity;
 
 import java.io.IOException;
 
-import org.springframework.stereotype.Component;
-
 import com.mcnaughty.game.domainObjects.Player;
 import com.mcnaughty.game.input.impl.KeyboardinputImpl;
 
@@ -15,7 +13,9 @@ public class TestPlayer extends Player {
 	public TestPlayer(int height, int width, double xStartLocation,
 			double yStartLocation, String imagePath) throws IOException {
 		super(height, width, xStartLocation, yStartLocation, imagePath);
-		//TODO this is not getting autowired because im using new to creat the object, but i think my bigger issue now is that im not refreshing the screen.
+		// TODO this is not getting autowired because im using new to creat the
+		// object, but i think my bigger issue now is that im not refreshing the
+		// screen.
 		input = new KeyboardinputImpl();
 	}
 
