@@ -12,9 +12,7 @@ public abstract class Player extends Entity {
 	protected Input input;
 
 	protected Player(int height, int width, double xStartLocation,
-			double yStartLocation, Input input, String imagePath)
-			throws IOException {
+			double yStartLocation, String imagePath) throws IOException {
 		super(height, width, xStartLocation, yStartLocation, imagePath);
-		this.input = input;
 	}
 }

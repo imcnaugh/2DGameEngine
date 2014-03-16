@@ -6,6 +6,9 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public abstract class Entity {
 
 	private final int height;

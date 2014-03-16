@@ -5,7 +5,10 @@ import java.io.IOException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.mcnaughty.game.domainObjects.Entity;
+import com.mcnaughty.game.gameCore.EntityManager;
 import com.mcnaughty.game.gameCore.GameCore;
+import com.mcnaughty.spaceInvaders.entity.TestPlayer;
 
 public class SpaceInvadersMain {
 
@@ -17,7 +20,7 @@ public class SpaceInvadersMain {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
 
-		GameCore gameCore = (GameCore) ctx.getBean(GameCore.class);
-		gameCore.startGame();
+		GameManager manager = ctx.getBean(GameManager.class);
+		manager.setupGame();
 	}
 }
