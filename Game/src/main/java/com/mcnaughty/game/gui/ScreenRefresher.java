@@ -10,13 +10,14 @@ public class ScreenRefresher implements Runnable {
 	@Autowired
 	private MainGui mainGui;
 	
+	@Autowired
+	private DrawArea drawArea;
+	
 	@Override
 	public void run() {
 		while(true){
-			
-			
-			
 			try {
+				drawArea.repaint();
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
