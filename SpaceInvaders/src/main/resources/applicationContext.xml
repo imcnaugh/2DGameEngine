@@ -15,7 +15,8 @@
 		<constructor-arg name="width" value="100" />
 		<constructor-arg name="xStartLocation" value="100" />
 		<constructor-arg name="yStartLocation" value="100" />
-		<constructor-arg name="imagePath" value="src/main/resources/images/test.jpg" />
+		<constructor-arg name="imagePath"
+			value="src/main/resources/images/test.jpg" />
 	</bean>
 
 </beans>

@@ -4,7 +4,6 @@ import java.awt.Dimension;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,12 +17,11 @@ public class MainGui {
 
 	@Autowired
 	private DrawArea drawArea;
-	
+
 	@Autowired
 	private Input input;
 
 	public void setupMainGui() {
-		mainFrame.addKeyListener((KeyListener) input);
 		configureGuiComponets();
 		mainFrame.add(drawArea);
 		displayMainFrame();
@@ -37,5 +35,6 @@ public class MainGui {
 	private void configureGuiComponets() {
 		mainFrame.setMinimumSize(new Dimension(400, 400));
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainFrame.addKeyListener((KeyListener) input);
 	}
 }

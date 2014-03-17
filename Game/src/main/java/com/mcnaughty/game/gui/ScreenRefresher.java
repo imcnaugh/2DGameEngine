@@ -6,9 +6,6 @@ import org.springframework.stereotype.Component;
 //TODO find a better name for this, holy crap is refresher even a word?
 @Component
 public class ScreenRefresher implements Runnable {
-
-	@Autowired
-	private MainGui mainGui;
 	
 	@Autowired
 	private DrawArea drawArea;
@@ -17,6 +14,7 @@ public class ScreenRefresher implements Runnable {
 	public void run() {
 		while(true){
 			try {
+				//TODO tripple buffer in here
 				drawArea.repaint();
 				Thread.sleep(100);
 			} catch (InterruptedException e) {

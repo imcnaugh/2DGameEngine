@@ -2,7 +2,6 @@ package com.mcnaughty.game.gui;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
@@ -22,15 +21,10 @@ public class DrawArea extends JPanel {
 
 	@Autowired
 	private EntityManager entityManager;
-	
-	public DrawArea(){
-	}
-	
+
 	public void paintComponent(Graphics g) {
 		drawGameplay(g);
 	}
-	
-
 
 	private void drawGameplay(Graphics g) {
 		// TODO make background configurable
@@ -38,6 +32,7 @@ public class DrawArea extends JPanel {
 		g.fillRect(0, 0, 400, 400);
 
 		for (Entity entity : entityManager.getEntities()) {
+			//TODO add logic for draw order
 			g.drawImage(entity.getImage(), (int) entity.getxLocation(),
 					(int) entity.getyLocation(), entity.getWidth(),
 					entity.getHeight(), null);

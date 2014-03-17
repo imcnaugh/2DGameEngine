@@ -14,21 +14,15 @@ public class KeyboardinputImpl implements Input, KeyListener {
 	private boolean downArrowPressed;
 	private boolean leftArrowPressed;
 	private boolean rightArrowPressed;
-	
-	private static int count = 0;
 
 	public KeyboardinputImpl() {
 		upArrowPressed = false;
 		downArrowPressed = false;
 		leftArrowPressed = false;
 		rightArrowPressed = false;
-		count++;
 	}
 
 	public boolean isUpArrowPressed() {
-//		if(upArrowPressed){
-			System.out.println("hello" + count);
-//		}
 		return upArrowPressed;
 	}
 
