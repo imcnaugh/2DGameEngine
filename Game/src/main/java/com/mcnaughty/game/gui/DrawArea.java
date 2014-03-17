@@ -24,7 +24,6 @@ public class DrawArea extends JPanel {
 	private EntityManager entityManager;
 	
 	public DrawArea(){
-		this.addKeyListener((KeyListener) input);
 	}
 	
 	public void paintComponent(Graphics g) {

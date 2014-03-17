@@ -8,7 +8,7 @@ import com.mcnaughty.game.input.impl.KeyboardinputImpl;
 public class TestPlayer extends Player {
 
 	// TODO dont hardcode this
-	private double speed = 3;
+	private double speed = 30;
 
 	public TestPlayer(int height, int width, double xStartLocation,
 			double yStartLocation, String imagePath) throws IOException {

@@ -1,12 +1,15 @@
 package com.mcnaughty.game.gui;
 
 import java.awt.Dimension;
+import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.mcnaughty.game.input.Input;
 
 @Component
 public class MainGui {
@@ -15,8 +18,12 @@ public class MainGui {
 
 	@Autowired
 	private DrawArea drawArea;
+	
+	@Autowired
+	private Input input;
 
 	public void setupMainGui() {
+		mainFrame.addKeyListener((KeyListener) input);
 		configureGuiComponets();
 		mainFrame.add(drawArea);
 		displayMainFrame();
