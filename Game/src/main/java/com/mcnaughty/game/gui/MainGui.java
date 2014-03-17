@@ -31,9 +31,9 @@ public class MainGui {
 		mainFrame.pack();
 		mainFrame.setVisible(true);
 	}
-
+	
 	private void configureGuiComponets() {
-		mainFrame.setMinimumSize(new Dimension(400, 400));
+		mainFrame.setPreferredSize(new Dimension(400, 400));
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.addKeyListener((KeyListener) input);
 	}

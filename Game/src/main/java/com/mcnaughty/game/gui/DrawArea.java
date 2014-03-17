@@ -29,14 +29,13 @@ public class DrawArea extends JPanel {
 	private void drawGameplay(Graphics g) {
 		// TODO make background configurable
 		g.setColor(Color.BLACK);
-		g.fillRect(0, 0, 400, 400);
+		g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
 		for (Entity entity : entityManager.getEntities()) {
-			//TODO add logic for draw order
+			// TODO add logic for draw order
 			g.drawImage(entity.getImage(), (int) entity.getxLocation(),
 					(int) entity.getyLocation(), entity.getWidth(),
 					entity.getHeight(), null);
 		}
 	}
-
 }
