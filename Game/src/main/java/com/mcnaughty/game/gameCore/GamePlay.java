@@ -25,7 +25,6 @@ public class GamePlay implements Runnable {
 				entity.onTick(tick);
 			}
 			try {
-				// TODO un hard code the tick rate
 				System.out.println(milisecondsInTick);
 				Thread.sleep(milisecondsInTick);
 			} catch (InterruptedException e) {

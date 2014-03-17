@@ -17,6 +17,10 @@
 	<!-- gameCore properties -->
 	<util:properties id="gameCoreProperties" location="gameCoreProperties.properties" />
 
+	<bean class="com.mcnaughty.game.gui.ScreenRefresher">
+		<property name="fps" value="#{gameCoreProperties['framesPerSecond']}" />
+	</bean>
+
 	<bean class="com.mcnaughty.game.gameCore.GamePlay">
 		<property name="milisecondsInTick" value="#{gameCoreProperties['milisecondsInTick']}" />
 	</bean>

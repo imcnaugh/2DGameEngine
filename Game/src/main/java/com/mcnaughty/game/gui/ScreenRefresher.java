@@ -4,11 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 //TODO find a better name for this, holy crap is refresher even a word?
-@Component
 public class ScreenRefresher implements Runnable {
 	
 	@Autowired
 	private DrawArea drawArea;
+	
+	private int fps;
 	
 	@Override
 	public void run() {
@@ -16,10 +17,18 @@ public class ScreenRefresher implements Runnable {
 			try {
 				//TODO tripple buffer in here
 				drawArea.repaint();
-				Thread.sleep(100);
+				Thread.sleep(1000/fps);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	public int getFps() {
+		return fps;
+	}
+
+	public void setFps(int fps) {
+		this.fps = fps;
 	}
 }
