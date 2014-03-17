@@ -12,32 +12,31 @@
 	<!-- add the application context file from the game project -->
 	<import resource="classpath*:Game/src/main/resources*.xml" />
 
+
 	<context:component-scan base-package="com.mcnaughty" />
+
 
 	<!-- gameCore properties -->
 	<util:properties id="gameCoreProperties" location="gameCoreProperties.properties" />
-
 	<!-- player properties -->
 	<util:properties id="playerProperties" location="player.properties" />
+
 
 	<bean class="com.mcnaughty.game.gui.ScreenRefresher">
 		<property name="fps" value="#{gameCoreProperties['framesPerSecond']}" />
 	</bean>
-
 	<bean class="com.mcnaughty.game.gameCore.GamePlay">
 		<property name="milisecondsInTick" value="#{gameCoreProperties['milisecondsInTick']}" />
 	</bean>
-
 	<bean class="com.mcnaughty.spaceInvaders.entity.TestPlayer">
+		<constructor-arg name="xStartLocation" value="100" />
+		<constructor-arg name="yStartLocation" value="100" />
 		<constructor-arg name="height"
 			value="#{playerProperties['player.initialHeight']}" />
 		<constructor-arg name="width"
 			value="#{playerProperties['player.initialWidth']}" />
 		<constructor-arg name="imagePath"
 			value="#{playerProperties['player.imagePath']}" />
-		<constructor-arg name="xStartLocation" value="100" />
-		<constructor-arg name="yStartLocation" value="100" />
 		<property name="speed" value="#{playerProperties['player.initialSpeed']}"></property>
 	</bean>
-
 </beans>
