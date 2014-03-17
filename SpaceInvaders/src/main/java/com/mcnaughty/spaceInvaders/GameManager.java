@@ -10,6 +10,9 @@ import com.mcnaughty.spaceInvaders.entity.TestPlayer;
 /*
  * TODO change the name of this class, actually this 
  * will probably look completely different in a few days
+ * 
+ * TODO also add collision detection to either the gameCore
+ * thread or in its own thread,
  */
 @Component
 public class GameManager {

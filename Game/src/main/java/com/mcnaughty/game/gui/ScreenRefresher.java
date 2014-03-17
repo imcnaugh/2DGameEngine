@@ -10,7 +10,6 @@ public class ScreenRefresher implements Runnable {
 
 	private int fps;
 
-	@Override
 	public void run() {
 		while (true) {
 			try {
