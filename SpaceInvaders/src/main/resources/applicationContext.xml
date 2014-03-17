@@ -17,6 +17,9 @@
 	<!-- gameCore properties -->
 	<util:properties id="gameCoreProperties" location="gameCoreProperties.properties" />
 
+	<!-- player properties -->
+	<util:properties id="playerProperties" location="player.properties" />
+
 	<bean class="com.mcnaughty.game.gui.ScreenRefresher">
 		<property name="fps" value="#{gameCoreProperties['framesPerSecond']}" />
 	</bean>
@@ -26,12 +29,15 @@
 	</bean>
 
 	<bean class="com.mcnaughty.spaceInvaders.entity.TestPlayer">
-		<constructor-arg name="height" value="100" />
-		<constructor-arg name="width" value="100" />
+		<constructor-arg name="height"
+			value="#{playerProperties['player.initialHeight']}" />
+		<constructor-arg name="width"
+			value="#{playerProperties['player.initialWidth']}" />
+		<constructor-arg name="imagePath"
+			value="#{playerProperties['player.imagePath']}" />
 		<constructor-arg name="xStartLocation" value="100" />
 		<constructor-arg name="yStartLocation" value="100" />
-		<constructor-arg name="imagePath"
-			value="src/main/resources/images/test.jpg" />
+		<property name="speed" value="#{playerProperties['player.initialSpeed']}"></property>
 	</bean>
 
 </beans>
