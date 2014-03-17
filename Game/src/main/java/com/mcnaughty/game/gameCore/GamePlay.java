@@ -1,11 +1,9 @@
 package com.mcnaughty.game.gameCore;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import com.mcnaughty.game.domainObjects.Entity;
 
-@Component
 public class GamePlay implements Runnable {
 
 	@Autowired
@@ -13,6 +11,8 @@ public class GamePlay implements Runnable {
 
 	private boolean gameRunning;
 	private long tick;
+
+	private long milisecondsInTick;
 
 	public GamePlay() {
 		gameRunning = true;
@@ -25,12 +25,21 @@ public class GamePlay implements Runnable {
 				entity.onTick(tick);
 			}
 			try {
-				//TODO un hard code the frame rate
-				Thread.sleep(10);
+				// TODO un hard code the tick rate
+				System.out.println(milisecondsInTick);
+				Thread.sleep(milisecondsInTick);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			tick++;
 		}
+	}
+
+	public long getMilisecondsInTick() {
+		return milisecondsInTick;
+	}
+
+	public void setMilisecondsInTick(long milisecondsInTick) {
+		this.milisecondsInTick = milisecondsInTick;
 	}
 }
