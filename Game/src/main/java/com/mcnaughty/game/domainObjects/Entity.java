@@ -1,10 +1,8 @@
 package com.mcnaughty.game.domainObjects;
 
 import java.awt.Image;
-import java.io.File;
+import java.awt.Toolkit;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
 
 import org.springframework.stereotype.Component;
 
@@ -36,7 +34,7 @@ public abstract class Entity {
 		this.width = width;
 		this.xLocation = xStartLocation;
 		this.yLocation = yStartLocation;
-		this.image = ImageIO.read(new File(imagePath));
+		this.image = Toolkit.getDefaultToolkit().getImage(imagePath);
 	}
 
 	/**
