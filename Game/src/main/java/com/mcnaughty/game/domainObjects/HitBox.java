@@ -15,7 +15,7 @@ public class HitBox {
 	private double topY;
 	private double bottomY;
 	
-	private Enum type;
+	public Enum type;
 	
 	private List<HitBox> nextedBoxes;
 	
