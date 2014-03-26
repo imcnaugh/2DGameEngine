@@ -21,9 +21,13 @@ public class GamePlay implements Runnable {
 
 	public void run() {
 		while (gameRunning) {
+			// movment
 			for (Entity entity : entityManager.getEntities()) {
 				entity.onTick(tick);
 			}
+			
+			//CollisionDetection
+			//TODO implement			
 			try {
 				Thread.sleep(milisecondsInTick);
 			} catch (InterruptedException e) {
