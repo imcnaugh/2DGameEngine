@@ -15,4 +15,8 @@ public class TestEntity extends Entity {
 
 	}
 
+	public void registerHitBoxe() {
+		
+	}
+
 }

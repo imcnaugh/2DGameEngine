@@ -35,4 +35,8 @@ public class TestPlayer extends Player {
 	public void setSpeed(double speed) {
 		this.speed = speed;
 	}
+
+	public void registerHitBoxe() {
+		
+	}
 }
