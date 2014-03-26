@@ -49,5 +49,12 @@ public class TestPlayer extends Player {
 			System.out.println("This should show");
 		}
 		
+		if(testBox.type == OtherEnum.TESTA){
+			System.out.println("This should not show");
+		}
+		if(testBox.type == OtherEnum.TESTB){
+			System.out.println("This should not show either");
+		}
+		
 	}
 }
