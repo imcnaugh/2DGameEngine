@@ -10,8 +10,8 @@ public class HitBox {
 	public boolean isCollision(HitBox otherBox) {
 		if ((otherBox.getLeftX() < this.leftX && otherBox.getLeftX() > this.rightX)
 				|| (otherBox.getRightX() < this.leftX && otherBox.getRightX() > this.rightX)) {
-			if((otherBox.getTopY() < this.bottomY && otherBox.getTopY() > this.topY)
-				|| (otherBox.getBottomY() < this.bottomY && otherBox.getBottomY() > this.topY)){
+			if ((otherBox.getTopY() < this.bottomY && otherBox.getTopY() > this.topY)
+					|| (otherBox.getBottomY() < this.bottomY && otherBox.getBottomY() > this.topY)) {
 				return true;
 			}
 		}

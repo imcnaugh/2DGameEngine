@@ -3,7 +3,6 @@ package com.mcnaughty.game.domainObjects;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.io.IOException;
-import java.util.List;
 
 import org.springframework.stereotype.Component;
 
@@ -17,8 +16,6 @@ public abstract class Entity {
 	private double yLocation;
 
 	private Image image;
-
-	private List<HitBox> hitBoxes;
 
 	/**
 	 * @param height
