@@ -1,11 +1,33 @@
 package com.mcnaughty.game.domainObjects;
 
+import java.util.List;
+
 public class HitBox {
 
+	/*
+	 * TODO somehow add the entity x and y cords to this,
+	 * or account for it somehow.
+	 * 
+	 * TODO also find a way to handle collisions
+	 */
 	private double leftX;
 	private double rightX;
 	private double topY;
 	private double bottomY;
+	
+	private Enum type;
+	
+	private List<HitBox> nextedBoxes;
+	
+	private Entity rootEntity;
+	
+	public HitBox(double leftX, double rightX, double topY, double bottomY, Entity rootEntity){
+		this.leftX = leftX;
+		this.rightX = rightX;
+		this.topY = topY;
+		this.bottomY = bottomY;
+		this.rootEntity = rootEntity;
+	}
 
 	public boolean isCollision(HitBox otherBox) {
 		if ((otherBox.getLeftX() < this.leftX && otherBox.getLeftX() > this.rightX)
