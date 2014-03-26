@@ -1,7 +1,6 @@
 package com.mcnaughty.spaceInvaders.entity;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
 
 import com.mcnaughty.game.domainObjects.HitBox;
 import com.mcnaughty.game.domainObjects.Player;
@@ -41,20 +40,20 @@ public class TestPlayer extends Player {
 	public void registerHitBoxe() {
 		HitBox testBox = new HitBox(0, 10, 0, 10, this);
 		testBox.type = HitBoxType.TESTA;
-		
-		if(testBox.type == HitBoxType.TESTB){
+
+		if (testBox.type == HitBoxType.TESTB) {
 			System.out.println("this should not show");
 		}
-		if(testBox.type == HitBoxType.TESTA){
+		if (testBox.type == HitBoxType.TESTA) {
 			System.out.println("This should show");
 		}
-		
-		if(testBox.type == OtherEnum.TESTA){
+
+		if (testBox.type == OtherEnum.TESTA) {
 			System.out.println("This should not show");
 		}
-		if(testBox.type == OtherEnum.TESTB){
+		if (testBox.type == OtherEnum.TESTB) {
 			System.out.println("This should not show either");
 		}
-		
+
 	}
 }
