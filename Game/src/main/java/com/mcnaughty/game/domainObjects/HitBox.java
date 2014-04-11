@@ -31,11 +31,14 @@ public class HitBox {
 	}
 
 	public boolean isCollision(HitBox otherBox) {
-		if ((otherBox.getLeftX() < this.leftX && otherBox.getLeftX() > this.rightX)
-				|| (otherBox.getRightX() < this.leftX && otherBox.getRightX() > this.rightX)) {
-			if ((otherBox.getTopY() < this.bottomY && otherBox.getTopY() > this.topY)
-					|| (otherBox.getBottomY() < this.bottomY && otherBox
-							.getBottomY() > this.topY)) {
+		if ((otherBox.getLeftX() < this.getLeftX() && otherBox.getLeftX() > this
+				.getRightX())
+				|| (otherBox.getRightX() < this.getLeftX() && otherBox
+						.getRightX() > this.getRightX())) {
+			if ((otherBox.getTopY() < this.getBottomY() && otherBox.getTopY() > this
+					.getTopY())
+					|| (otherBox.getBottomY() < this.getBottomY() && otherBox
+							.getBottomY() > this.getTopY())) {
 				return true;
 			}
 		}
@@ -43,7 +46,7 @@ public class HitBox {
 	}
 
 	public double getLeftX() {
-		return leftX;
+		return leftX + rootEntity.getxLocation();
 	}
 
 	public void setLeftX(double leftX) {
@@ -51,7 +54,7 @@ public class HitBox {
 	}
 
 	public double getRightX() {
-		return rightX;
+		return rightX + rootEntity.getxLocation();
 	}
 
 	public void setRightX(double rightX) {
@@ -59,7 +62,7 @@ public class HitBox {
 	}
 
 	public double getTopY() {
-		return topY;
+		return topY + rootEntity.getyLocation();
 	}
 
 	public void setTopY(double topY) {
@@ -67,7 +70,7 @@ public class HitBox {
 	}
 
 	public double getBottomY() {
-		return bottomY;
+		return bottomY + rootEntity.getyLocation();
 	}
 
 	public void setBottomY(double bottomY) {
