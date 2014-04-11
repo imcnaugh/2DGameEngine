@@ -35,8 +35,6 @@ public abstract class Entity {
 		this.xLocation = xStartLocation;
 		this.yLocation = yStartLocation;
 		this.image = Toolkit.getDefaultToolkit().getImage(imagePath);
-		
-		registerHitBoxe();
 	}
 
 	/**
@@ -95,8 +93,6 @@ public abstract class Entity {
 	 */
 	public abstract void onTick(long tick);
 	
-	public abstract void registerHitBoxe();
-
 	public double getxLocation() {
 		return xLocation;
 	}

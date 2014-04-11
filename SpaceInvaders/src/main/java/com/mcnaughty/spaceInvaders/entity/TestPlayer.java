@@ -37,23 +37,22 @@ public class TestPlayer extends Player {
 		this.speed = speed;
 	}
 
-	public void registerHitBoxe() {
-		HitBox testBox = new HitBox(0, 10, 0, 10, this);
-		testBox.type = HitBoxType.TESTA;
+	protected void registerHitBoxes() {
+		hitBox = new HitBox(0, 10, 0, 10, this);
+		hitBox.type = HitBoxType.TESTA;
 
-		if (testBox.type == HitBoxType.TESTB) {
+		if (hitBox.type == HitBoxType.TESTB) {
 			System.out.println("this should not show");
 		}
-		if (testBox.type == HitBoxType.TESTA) {
+		if (hitBox.type == HitBoxType.TESTA) {
 			System.out.println("This should show");
 		}
 
-		if (testBox.type == OtherEnum.TESTA) {
+		if (hitBox.type == OtherEnum.TESTA) {
 			System.out.println("This should not show");
 		}
-		if (testBox.type == OtherEnum.TESTB) {
+		if (hitBox.type == OtherEnum.TESTB) {
 			System.out.println("This should not show either");
 		}
-
 	}
 }

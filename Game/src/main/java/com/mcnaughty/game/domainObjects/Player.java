@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.mcnaughty.game.input.Input;
 
-public abstract class Player extends Entity {
+public abstract class Player extends EntityWithHitBox {
 
 	@Autowired
 	protected Input input;
