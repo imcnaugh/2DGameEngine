@@ -38,14 +38,7 @@ public class TestPlayer extends Player {
 	}
 
 	protected void registerHitBoxes() {
-		hitBox = new HitBox(0, 10, 0, 10, this);
-		hitBox.type = HitBoxType.TESTA;
-
-		if (hitBox.type == HitBoxType.TESTB) {
-			System.out.println("this should not show");
-		}
-		if (hitBox.type == HitBoxType.TESTA) {
-			System.out.println("This should show");
-		}
+		hitBox = new HitBox(0, getWidth(), 0, getHeight(), this);
+		hitBox.type = HitBoxType.POSITIONBOX;
 	}
 }
