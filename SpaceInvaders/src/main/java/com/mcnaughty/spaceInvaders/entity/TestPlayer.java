@@ -39,6 +39,7 @@ public class TestPlayer extends Player {
 
 	protected void registerHitBoxes() {
 		hitBox = new HitBox(0, getWidth(), 0, getHeight(), this);
-		hitBox.type = HitBoxType.POSITIONBOX;
+		//TODO change this to a positionBox
+		hitBox.type = HitBoxType.SOLIDHIT;
 	}
 }

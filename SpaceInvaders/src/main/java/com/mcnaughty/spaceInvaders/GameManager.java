@@ -27,7 +27,7 @@ public class GameManager {
 	private TestPlayer player;
 
 	public void setupGame() {
-		//TODO add level objects that 
+		// TODO add level objects that
 		entityManager.getEntities().add(player);
 
 		gameCore.startGame();
