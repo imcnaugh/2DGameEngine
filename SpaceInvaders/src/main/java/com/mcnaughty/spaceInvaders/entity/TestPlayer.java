@@ -47,12 +47,5 @@ public class TestPlayer extends Player {
 		if (hitBox.type == HitBoxType.TESTA) {
 			System.out.println("This should show");
 		}
-
-		if (hitBox.type == OtherEnum.TESTA) {
-			System.out.println("This should not show");
-		}
-		if (hitBox.type == OtherEnum.TESTB) {
-			System.out.println("This should not show either");
-		}
 	}
 }
