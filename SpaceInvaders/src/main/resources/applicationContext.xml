@@ -25,9 +25,11 @@
 	<bean class="com.mcnaughty.game.gui.ScreenRefresher">
 		<property name="fps" value="#{gameCoreProperties['framesPerSecond']}" />
 	</bean>
+	
 	<bean class="com.mcnaughty.game.gameCore.GamePlay">
 		<property name="milisecondsInTick" value="#{gameCoreProperties['milisecondsInTick']}" />
 	</bean>
+	
 	<bean class="com.mcnaughty.spaceInvaders.entity.TestPlayer">
 		<constructor-arg name="xStartLocation" value="100" />
 		<constructor-arg name="yStartLocation" value="100" />
