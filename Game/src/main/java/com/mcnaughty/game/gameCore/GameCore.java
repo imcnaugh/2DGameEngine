@@ -24,9 +24,9 @@ public class GameCore {
 	public void startGame(){
 		maingui.setupMainGui();
 		Thread gamePlayThread = new Thread(gamePlay);
-		gamePlayThread.start();
-		
 		Thread redrawThread = new Thread(screenRefresher);
+
+		gamePlayThread.start();
 		redrawThread.start();
 	}
 }
