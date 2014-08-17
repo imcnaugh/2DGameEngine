@@ -33,6 +33,7 @@ public class MainGui {
 	}
 	
 	private void configureGuiComponets() {
+		//TODO make size configurabal
 		mainFrame.setPreferredSize(new Dimension(400, 400));
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.addKeyListener((KeyListener) input);
