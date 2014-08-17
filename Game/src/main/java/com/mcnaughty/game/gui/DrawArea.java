@@ -15,9 +15,6 @@ import com.mcnaughty.game.gameCore.EntityManager;
 public class DrawArea extends JPanel {
 	private static final long serialVersionUID = 1L;
 
-	// @Autowired
-	// private Input input;
-
 	@Autowired
 	private EntityManager entityManager;
 

@@ -31,16 +31,13 @@ public class HitBox {
 	}
 
 	public boolean isCollision(HitBox otherBox) {
-		if ((otherBox.getLeftX() < this.getLeftX() && otherBox.getLeftX() > this
-				.getRightX())
-				|| (otherBox.getRightX() < this.getLeftX() && otherBox
-						.getRightX() > this.getRightX())) {
-			if ((otherBox.getTopY() < this.getBottomY() && otherBox.getTopY() > this
-					.getTopY())
-					|| (otherBox.getBottomY() < this.getBottomY() && otherBox
-							.getBottomY() > this.getTopY())) {
-				return true;
-			}
+		if (((otherBox.getLeftX() < this.getLeftX() && otherBox.getLeftX() > this
+				.getRightX()) || (otherBox.getRightX() < this.getLeftX() && otherBox
+				.getRightX() > this.getRightX()))
+				&& ((otherBox.getTopY() < this.getBottomY() && otherBox
+						.getTopY() > this.getTopY()) || (otherBox.getBottomY() < this
+						.getBottomY() && otherBox.getBottomY() > this.getTopY()))) {
+			return true;
 		}
 		return false;
 	}

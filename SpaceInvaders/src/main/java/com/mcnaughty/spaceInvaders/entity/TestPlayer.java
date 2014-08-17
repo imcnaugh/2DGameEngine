@@ -27,6 +27,9 @@ public class TestPlayer extends Player {
 		if (input.isRightArrowPressed()) {
 			moveRight(speed);
 		}
+		if (input.isSpaceBarPressed()) {
+			System.out.println("pew");
+		}
 	}
 
 	public double getSpeed() {
@@ -39,7 +42,7 @@ public class TestPlayer extends Player {
 
 	protected void registerHitBoxes() {
 		hitBox = new HitBox(0, getWidth(), 0, getHeight(), this);
-		//TODO change this to a positionBox
+		// TODO change this to a positionBox
 		hitBox.type = HitBoxType.SOLIDHIT;
 	}
 }

@@ -14,12 +14,14 @@ public class KeyboardinputImpl implements Input, KeyListener {
 	private boolean downArrowPressed;
 	private boolean leftArrowPressed;
 	private boolean rightArrowPressed;
+	private boolean spaceBarPressed;
 
 	public KeyboardinputImpl() {
 		upArrowPressed = false;
 		downArrowPressed = false;
 		leftArrowPressed = false;
 		rightArrowPressed = false;
+		spaceBarPressed = false;
 	}
 
 	public boolean isUpArrowPressed() {
@@ -38,6 +40,10 @@ public class KeyboardinputImpl implements Input, KeyListener {
 		return rightArrowPressed;
 	}
 
+	public boolean isSpaceBarPressed() {
+		return spaceBarPressed;
+	}
+
 	public void keyPressed(KeyEvent e) {
 		switch (e.getKeyCode()) {
 			case (KeyEvent.VK_UP): {
@@ -54,6 +60,10 @@ public class KeyboardinputImpl implements Input, KeyListener {
 			}
 			case (KeyEvent.VK_RIGHT): {
 				rightArrowPressed = true;
+				break;
+			}
+			case (KeyEvent.VK_SPACE): {
+				spaceBarPressed = true;
 				break;
 			}
 		}
@@ -75,6 +85,10 @@ public class KeyboardinputImpl implements Input, KeyListener {
 			}
 			case (KeyEvent.VK_RIGHT): {
 				rightArrowPressed = false;
+				break;
+			}
+			case (KeyEvent.VK_SPACE): {
+				spaceBarPressed = false;
 				break;
 			}
 		}
