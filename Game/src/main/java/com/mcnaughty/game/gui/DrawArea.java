@@ -10,14 +10,13 @@ import org.springframework.stereotype.Component;
 
 import com.mcnaughty.game.domainObjects.Entity;
 import com.mcnaughty.game.gameCore.EntityManager;
-import com.mcnaughty.game.input.Input;
 
 @Component
 public class DrawArea extends JPanel {
 	private static final long serialVersionUID = 1L;
 
-	@Autowired
-	private Input input;
+	// @Autowired
+	// private Input input;
 
 	@Autowired
 	private EntityManager entityManager;
