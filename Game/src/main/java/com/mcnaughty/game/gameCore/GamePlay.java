@@ -25,9 +25,9 @@ public class GamePlay implements Runnable {
 			for (Entity entity : entityManager.getEntities()) {
 				entity.onTick(tick);
 			}
-			
-			//CollisionDetection
-			//TODO implement			
+
+			// CollisionDetection
+			// TODO implement
 			try {
 				Thread.sleep(milisecondsInTick);
 			} catch (InterruptedException e) {
