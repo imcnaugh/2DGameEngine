@@ -46,7 +46,7 @@ public abstract class Entity {
 	 * @return current x location
 	 */
 	protected double moveLeft(double xVal) {
-		return xLocation += xVal;
+		return xLocation -= xVal;
 	}
 
 	/**
@@ -58,7 +58,7 @@ public abstract class Entity {
 	 * @return current x location
 	 */
 	protected double moveRight(double xVal) {
-		return xLocation -= xVal;
+		return xLocation += xVal;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public abstract class Entity {
 	 * @return current y location
 	 */
 	protected double moveUp(double yVal) {
-		return yLocation += yVal;
+		return yLocation -= yVal;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public abstract class Entity {
 	 * @return current y location
 	 */
 	protected double moveDown(double yVal) {
-		return yLocation -= yVal;
+		return yLocation += yVal;
 	}
 
 	/**
