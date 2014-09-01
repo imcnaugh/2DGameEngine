@@ -9,14 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.mcnaughty.game.domainObjects.Entity;
-import com.mcnaughty.game.gameCore.EntityManager;
+import com.mcnaughty.game.gameCore.GameStateManager;
 
 @Component
 public class DrawArea extends JPanel {
 	private static final long serialVersionUID = 1L;
 
 	@Autowired
-	private EntityManager entityManager;
+	private GameStateManager gameStateManager;
 
 	public void paintComponent(Graphics g) {
 		drawGameplay(g);
@@ -27,7 +27,7 @@ public class DrawArea extends JPanel {
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
-		for (Entity entity : entityManager.getEntities()) {
+		for (Entity entity : gameStateManager.getCurrentState().getEntities()) {
 			// TODO add logic for draw order
 			g.drawImage(entity.getImage(), (int) entity.getxLocation(),
 					(int) entity.getyLocation(), entity.getWidth(),

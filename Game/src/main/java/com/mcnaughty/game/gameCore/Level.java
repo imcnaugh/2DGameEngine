@@ -4,7 +4,7 @@ public abstract class Level {
 	
 	protected final String name;
 	
-	protected EntityManager entityManager;
+//	protected EntityManager entityManager;
 
 	protected Level(String name){
 		this.name = name;

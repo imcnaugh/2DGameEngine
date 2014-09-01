@@ -3,9 +3,10 @@ package com.mcnaughty.spaceInvaders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.mcnaughty.game.gameCore.EntityManager;
 import com.mcnaughty.game.gameCore.GameCore;
+import com.mcnaughty.game.gameCore.GameStateManager;
 import com.mcnaughty.spaceInvaders.entity.TestPlayer;
+import com.mcnaughty.spaceInvaders.gameStates.PlayState;
 
 /*
  * TODO change the name of this class, actually this 
@@ -21,14 +22,18 @@ public class GameManager {
 	private GameCore gameCore;
 
 	@Autowired
-	private EntityManager entityManager;
+	private GameStateManager gameStateManager;
 
 	@Autowired
 	private TestPlayer player;
 
 	public void setupGame() {
 		// TODO add level objects that
-		entityManager.getEntities().add(player);
+		// entityManager.getEntities().add(player);
+		PlayState play = new PlayState("play", player);
+
+		gameStateManager.addGameState(play);
+		gameStateManager.setCurrentState(play);
 
 		gameCore.startGame();
 	}

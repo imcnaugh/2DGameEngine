@@ -3,11 +3,12 @@ package com.mcnaughty.game.gameCore;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.mcnaughty.game.domainObjects.Entity;
+import com.mcnaughty.game.domainObjects.GameState;
 
 public class GamePlay implements Runnable {
 
 	@Autowired
-	private EntityManager entityManager;
+	private GameStateManager gameStateManager;
 
 	private boolean gameRunning;
 	private long tick;
@@ -21,8 +22,11 @@ public class GamePlay implements Runnable {
 
 	public void run() {
 		while (gameRunning) {
+			GameState currentState = gameStateManager.getCurrentState();
+			currentState.onTick(tick);
+
 			// movment
-			for (Entity entity : entityManager.getEntities()) {
+			for (Entity entity : currentState.getEntities()) {
 				entity.onTick(tick);
 			}
 
