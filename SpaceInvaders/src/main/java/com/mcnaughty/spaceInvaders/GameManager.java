@@ -28,8 +28,6 @@ public class GameManager {
 	private TestPlayer player;
 
 	public void setupGame() {
-		// TODO add level objects that
-		// entityManager.getEntities().add(player);
 		PlayState play = new PlayState("play", player);
 
 		gameStateManager.addGameState(play);
