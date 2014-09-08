@@ -119,7 +119,7 @@ public class MouseAndKeyboardinputImpl implements Input, KeyListener,
 				System.out.println(mouseLeftButtonPressed);
 				break;
 			}
-			case (MouseEvent.BUTTON2): {
+			case (MouseEvent.BUTTON3): {
 				mouseRightButtonPressed = true;
 				System.out.println(mouseRightButtonPressed);
 				break;
@@ -134,7 +134,7 @@ public class MouseAndKeyboardinputImpl implements Input, KeyListener,
 				System.out.println(mouseLeftButtonPressed);
 				break;
 			}
-			case (MouseEvent.BUTTON2): {
+			case (MouseEvent.BUTTON3): {
 				mouseRightButtonPressed = false;
 				System.out.println(mouseRightButtonPressed);
 				break;
