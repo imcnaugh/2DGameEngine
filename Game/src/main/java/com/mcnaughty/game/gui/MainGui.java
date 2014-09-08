@@ -2,6 +2,7 @@ package com.mcnaughty.game.gui;
 
 import java.awt.Dimension;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
 
@@ -37,5 +38,6 @@ public class MainGui {
 		mainFrame.setPreferredSize(new Dimension(400, 400));
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.addKeyListener((KeyListener) input);
+		mainFrame.addMouseListener((MouseListener) input);
 	}
 }
