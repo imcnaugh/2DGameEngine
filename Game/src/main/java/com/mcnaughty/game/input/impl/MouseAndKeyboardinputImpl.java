@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
 import org.springframework.stereotype.Component;
 
@@ -11,7 +12,7 @@ import com.mcnaughty.game.input.Input;
 
 @Component
 public class MouseAndKeyboardinputImpl implements Input, KeyListener,
-		MouseListener {
+		MouseListener, MouseMotionListener {
 
 	private boolean upArrowPressed;
 	private boolean downArrowPressed;
@@ -21,6 +22,9 @@ public class MouseAndKeyboardinputImpl implements Input, KeyListener,
 
 	private boolean mouseLeftButtonPressed;
 	private boolean mouseRightButtonPressed;
+
+	private int mouseX;
+	private int mouseY;
 
 	public MouseAndKeyboardinputImpl() {
 		upArrowPressed = false;
@@ -140,5 +144,13 @@ public class MouseAndKeyboardinputImpl implements Input, KeyListener,
 				break;
 			}
 		}
+	}
+
+	public void mouseDragged(MouseEvent arg0) {
+	}
+
+	public void mouseMoved(MouseEvent arg0) {
+		mouseX = arg0.getX();
+		mouseY = arg0.getY();
 	}
 }
