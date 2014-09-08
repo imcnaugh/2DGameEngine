@@ -103,17 +103,17 @@ public class MouseAndKeyboardinputImpl implements Input, KeyListener,
 	public void keyTyped(KeyEvent e) {
 	}
 
-	public void mouseClicked(MouseEvent arg0) {
+	public void mouseClicked(MouseEvent e) {
 	}
 
-	public void mouseEntered(MouseEvent arg0) {
+	public void mouseEntered(MouseEvent e) {
 	}
 
-	public void mouseExited(MouseEvent arg0) {
+	public void mouseExited(MouseEvent e) {
 	}
 
-	public void mousePressed(MouseEvent arg0) {
-		switch (arg0.getButton()) {
+	public void mousePressed(MouseEvent e) {
+		switch (e.getButton()) {
 			case (MouseEvent.BUTTON1): {
 				mouseLeftButtonPressed = true;
 				System.out.println(mouseLeftButtonPressed);
@@ -127,8 +127,8 @@ public class MouseAndKeyboardinputImpl implements Input, KeyListener,
 		}
 	}
 
-	public void mouseReleased(MouseEvent arg0) {
-		switch (arg0.getButton()) {
+	public void mouseReleased(MouseEvent e) {
+		switch (e.getButton()) {
 			case (MouseEvent.BUTTON1): {
 				mouseLeftButtonPressed = false;
 				System.out.println(mouseLeftButtonPressed);
