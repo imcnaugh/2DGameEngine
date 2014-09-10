@@ -1,6 +1,5 @@
 package com.mcnaughty.game.input;
 
-import java.awt.RenderingHints.Key;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
@@ -17,22 +16,23 @@ public class KeyboardAndMouseInput implements KeyListener, MouseListener,
 
 	private static List<InputListener> registerdClasses = new ArrayList<InputListener>();
 
-	public static void addKeyboardAndMouseInputListener(InputListener inputListener){
+	public static void addKeyboardAndMouseInputListener(
+			InputListener inputListener) {
 		registerdClasses.add(inputListener);
 	}
-	
+
 	public KeyboardAndMouseInput() {
 	}
 
 	public void keyPressed(KeyEvent e) {
-		for(InputListener inputListener : registerdClasses){
+		for (InputListener inputListener : registerdClasses) {
 			inputListener.keyPressed(e.getKeyCode());
 		}
 	}
 
 	public void keyReleased(KeyEvent e) {
-		for(InputListener inputListener : registerdClasses){
-			inputListener.keyRelesed(e.getKeyCode());
+		for (InputListener inputListener : registerdClasses) {
+			inputListener.keyReleased(e.getKeyCode());
 		}
 	}
 

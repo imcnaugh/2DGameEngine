@@ -14,8 +14,20 @@ public class TestPlayer extends Player {
 	}
 
 	public void onTick(long tick) {
-		if(isUpArrowPressed){
+		if (upArrowPressed) {
 			moveUp(speed);
+		}
+		if (downArrowPressed) {
+			moveDown(speed);
+		}
+		if (leftArrowPressed) {
+			moveLeft(speed);
+		}
+		if(rightArrowPressed){
+			moveRight(speed);
+		}
+		if(spaceKeyPressed){
+			System.out.println("pew");
 		}
 	}
 
