@@ -14,7 +14,9 @@ public class TestPlayer extends Player {
 	}
 
 	public void onTick(long tick) {
-		
+		if(isUpArrowPressed){
+			moveUp(speed);
+		}
 	}
 
 	public double getSpeed() {
