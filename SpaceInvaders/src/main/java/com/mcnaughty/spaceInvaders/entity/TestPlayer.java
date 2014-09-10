@@ -2,7 +2,6 @@ package com.mcnaughty.spaceInvaders.entity;
 
 import java.io.IOException;
 
-import com.mcnaughty.game.domainObjects.HitBox;
 import com.mcnaughty.game.domainObjects.Player;
 
 public class TestPlayer extends Player {
@@ -38,11 +37,5 @@ public class TestPlayer extends Player {
 
 	public void setSpeed(double speed) {
 		this.speed = speed;
-	}
-
-	protected void registerHitBoxes() {
-		hitBox = new HitBox(0, getWidth(), 0, getHeight(), this);
-		// TODO change this to a positionBox
-		hitBox.type = HitBoxType.SOLIDHIT;
 	}
 }
