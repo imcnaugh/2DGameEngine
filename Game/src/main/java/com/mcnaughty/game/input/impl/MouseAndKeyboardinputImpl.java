@@ -2,29 +2,19 @@ package com.mcnaughty.game.input.impl;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 
 import org.springframework.stereotype.Component;
 
 import com.mcnaughty.game.input.Input;
 
 @Component
-public class MouseAndKeyboardinputImpl implements Input, KeyListener,
-		MouseListener, MouseMotionListener {
+public class MouseAndKeyboardinputImpl implements Input, KeyListener {
 
 	private boolean upArrowPressed;
 	private boolean downArrowPressed;
 	private boolean leftArrowPressed;
 	private boolean rightArrowPressed;
 	private boolean spaceBarPressed;
-
-	private boolean mouseLeftButtonPressed;
-	private boolean mouseRightButtonPressed;
-
-	private int mouseX;
-	private int mouseY;
 
 	public MouseAndKeyboardinputImpl() {
 		upArrowPressed = false;
@@ -105,52 +95,5 @@ public class MouseAndKeyboardinputImpl implements Input, KeyListener,
 	}
 
 	public void keyTyped(KeyEvent e) {
-	}
-
-	public void mouseClicked(MouseEvent e) {
-	}
-
-	public void mouseEntered(MouseEvent e) {
-	}
-
-	public void mouseExited(MouseEvent e) {
-	}
-
-	public void mousePressed(MouseEvent e) {
-		switch (e.getButton()) {
-			case (MouseEvent.BUTTON1): {
-				mouseLeftButtonPressed = true;
-				System.out.println(mouseLeftButtonPressed);
-				break;
-			}
-			case (MouseEvent.BUTTON3): {
-				mouseRightButtonPressed = true;
-				System.out.println(mouseRightButtonPressed);
-				break;
-			}
-		}
-	}
-
-	public void mouseReleased(MouseEvent e) {
-		switch (e.getButton()) {
-			case (MouseEvent.BUTTON1): {
-				mouseLeftButtonPressed = false;
-				System.out.println(mouseLeftButtonPressed);
-				break;
-			}
-			case (MouseEvent.BUTTON3): {
-				mouseRightButtonPressed = false;
-				System.out.println(mouseRightButtonPressed);
-				break;
-			}
-		}
-	}
-
-	public void mouseDragged(MouseEvent arg0) {
-	}
-
-	public void mouseMoved(MouseEvent arg0) {
-		mouseX = arg0.getX();
-		mouseY = arg0.getY();
 	}
 }
