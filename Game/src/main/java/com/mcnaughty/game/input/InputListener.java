@@ -1,5 +1,5 @@
 package com.mcnaughty.game.input;
 
-public interface InputActionListener {
+public interface InputListener {
 	
 }

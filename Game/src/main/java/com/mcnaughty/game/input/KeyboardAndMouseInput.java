@@ -9,10 +9,10 @@ import java.awt.event.MouseMotionListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class KeyboardinputImpl implements KeyListener, MouseListener,
+public class KeyboardAndMouseInput implements KeyListener, MouseListener,
 		MouseMotionListener {
 
-	public KeyboardinputImpl() {
+	public KeyboardAndMouseInput() {
 	}
 
 	public void keyPressed(KeyEvent e) {

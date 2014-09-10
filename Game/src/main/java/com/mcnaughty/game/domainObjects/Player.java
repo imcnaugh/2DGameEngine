@@ -4,12 +4,12 @@ import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.mcnaughty.game.input.InputActionListener;
+import com.mcnaughty.game.input.InputListener;
 
 public abstract class Player extends Entity {
 
 	@Autowired
-	protected InputActionListener input;
+	protected InputListener input;
 
 	protected Player(int height, int width, double xStartLocation,
 			double yStartLocation, String imagePath) throws IOException {
