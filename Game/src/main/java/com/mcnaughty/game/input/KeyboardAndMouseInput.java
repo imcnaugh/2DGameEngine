@@ -21,9 +21,6 @@ public class KeyboardAndMouseInput implements KeyListener, MouseListener,
 		registerdClasses.add(inputListener);
 	}
 
-	public KeyboardAndMouseInput() {
-	}
-
 	public void keyPressed(KeyEvent e) {
 		for (InputListener inputListener : registerdClasses) {
 			inputListener.keyPressed(e.getKeyCode());
@@ -35,16 +32,32 @@ public class KeyboardAndMouseInput implements KeyListener, MouseListener,
 			inputListener.keyReleased(e.getKeyCode());
 		}
 	}
+	
+	public void mouseMoved(MouseEvent e) {
+		for (InputListener inputListener : registerdClasses) {
+			inputListener.mouseMoved(e.getX(), e.getY());
+		}
+	}
+	
+	public void mousePressed(MouseEvent e) {
+		for (InputListener inputListener : registerdClasses) {
+			inputListener.mousePressed(e.getButton());
+		}
+	}
+	
+	public void mouseReleased(MouseEvent e) {
+		for (InputListener inputListener : registerdClasses) {
+			inputListener.mouseReleased(e.getButton());
+		}
+	}
 
 	public void keyTyped(KeyEvent e) {
 	}
 
 	public void mouseDragged(MouseEvent e) {
-
-	}
-
-	public void mouseMoved(MouseEvent e) {
-
+		for (InputListener inputListener : registerdClasses) {
+			inputListener.mouseMoved(e.getX(), e.getY());
+		}
 	}
 
 	public void mouseClicked(MouseEvent e) {
@@ -59,11 +72,4 @@ public class KeyboardAndMouseInput implements KeyListener, MouseListener,
 
 	}
 
-	public void mousePressed(MouseEvent e) {
-
-	}
-
-	public void mouseReleased(MouseEvent e) {
-
-	}
 }

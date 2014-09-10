@@ -14,6 +14,9 @@ public abstract class Player extends Entity implements InputListener {
 	protected boolean rightArrowPressed = false;
 	protected boolean spaceKeyPressed = false;
 
+	protected int mouseXPos = -1;
+	protected int mouseYPos = -1;
+
 	protected Player(int height, int width, double xStartLocation,
 			double yStartLocation, String imagePath) throws IOException {
 		super(height, width, xStartLocation, yStartLocation, imagePath);
@@ -70,11 +73,8 @@ public abstract class Player extends Entity implements InputListener {
 		}
 	}
 
-	public void mousePressed(int mouseButtonCode, int xCord, int yCord) {
-
-	}
-
-	public void mouseReleased(int mouseButtonCode, int xCord, int yCord) {
-
+	public void mouseMoved(int xPos, int yPos) {
+		mouseXPos = xPos;
+		mouseYPos = yPos;
 	}
 }
