@@ -1,4 +1,4 @@
-package com.mcnaughty.game.input.impl;
+package com.mcnaughty.game.input;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.mcnaughty.game.input.impl.KeyboardinputImpl;
+import com.mcnaughty.game.input.KeyboardinputImpl;
 
 @Component
 public class MainGui {
