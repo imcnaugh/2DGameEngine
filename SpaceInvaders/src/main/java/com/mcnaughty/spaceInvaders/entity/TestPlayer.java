@@ -14,21 +14,7 @@ public class TestPlayer extends Player {
 	}
 
 	public void onTick(long tick) {
-		if (input.isDownArrowPressed()) {
-			moveDown(speed);
-		}
-		if (input.isUpArrowPressed()) {
-			moveUp(speed);
-		}
-		if (input.isLeftArrowPressed()) {
-			moveLeft(speed);
-		}
-		if (input.isRightArrowPressed()) {
-			moveRight(speed);
-		}
-		if (input.isSpaceBarPressed()) {
-			System.out.println("pew");
-		}
+		
 	}
 
 	public double getSpeed() {
