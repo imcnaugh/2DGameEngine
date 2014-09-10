@@ -92,7 +92,7 @@ public abstract class Entity {
 	 *            current tick
 	 */
 	public abstract void onTick(long tick);
-	
+
 	public double getxLocation() {
 		return xLocation;
 	}
@@ -103,6 +103,10 @@ public abstract class Entity {
 
 	public Image getImage() {
 		return image;
+	}
+
+	public void setImage(Image image) {
+		this.image = image;
 	}
 
 	public int getHeight() {
