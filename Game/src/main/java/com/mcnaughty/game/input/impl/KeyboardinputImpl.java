@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.mcnaughty.game.input.Input;
 
 @Component
-public class MouseAndKeyboardinputImpl implements Input, KeyListener {
+public class KeyboardinputImpl implements Input, KeyListener {
 
 	private boolean upArrowPressed;
 	private boolean downArrowPressed;
@@ -16,7 +16,7 @@ public class MouseAndKeyboardinputImpl implements Input, KeyListener {
 	private boolean rightArrowPressed;
 	private boolean spaceBarPressed;
 
-	public MouseAndKeyboardinputImpl() {
+	public KeyboardinputImpl() {
 		upArrowPressed = false;
 		downArrowPressed = false;
 		leftArrowPressed = false;
