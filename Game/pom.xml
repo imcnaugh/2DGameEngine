@@ -7,7 +7,7 @@
 	
 	<properties>
 		<jre.version>1.6</jre.version>
-		<spring.version>4.0.2.RELEASE</spring.version>
+		<spring.version>6.0.15</spring.version>
 	</properties>
 	
 	<build>
